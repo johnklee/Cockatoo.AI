@@ -124,6 +124,8 @@ class GCPSpeech2TextWrapper(ModelBase):
       raise ValueError('Only support wav file only now!')
 
     start_time = time.time()
+    channels = None
+    audio_content = None
     with open(audio_file_path, 'rb') as f:
         audio_content = f.read()
 
